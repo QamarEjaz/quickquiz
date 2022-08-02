@@ -3,48 +3,48 @@
   <div class="forms-container">
     <div class="signin-signup">
       <form #a="ngForm" (ngSubmit)="onSubmitLogin(a)" class="sign-in-form">
-        <h2 class="title">Sign in</h2>
+        <h2 class="title" style="color: #2ec724;">Sign in</h2>
         <div class="input-field">
-          <i class="fas fa-envelope"></i>
+          <i class="fas fa-envelope" style="color: #2ec724;"></i>
           <input type="text" placeholder="Email" name="email"  autocomplete="off" spellcheck="false" ngModel required email
             #email="ngModel" />
         </div>
         <div class="input-field">
-          <i class="fas fa-lock"></i>
+          <i class="fas fa-lock" style="color: #2ec724;"></i>
           <input type="password" placeholder="Password" name="p1" 
             autocomplete="off" spellcheck="false" ngModel required #p1="ngModel" />
         </div>
-        <input type="submit" [disabled]="a.invalid" value="Login" class="btn solid" />
-        <p class="social-text" style="font-weight: bold;"><a [routerLink]="['/reset']" >Forgot password?</a></p>
+        <input type="submit" [disabled]="a.invalid" value="Login" class="btn solid" style="background-color: #2ec724;"/>
+        <p class="social-text" style="font-weight: bold;"><a [routerLink]="['/reset']" style="color: #2ec724;" >Forgot password?</a></p>
         <p class="social-text" style="color: red;font-weight: bold;font-size: 20px;" *ngIf="avail">{{msg}}</p>
 
       </form>
       <form #f="ngForm" (ngSubmit)="onSubmitRegister(f)" class="sign-up-form">
-        <h2 class="title">Student Sign up</h2>
+        <h2 class="title" style="color: #2ec724;">Student Sign up</h2>
 
         <div class="input-field">
-          <i class="fas fa-envelope"></i>
+          <i class="fas fa-envelope" style="color: #2ec724;"></i>
           <input type="email" placeholder="Email" name="email" 
             autocomplete="off" email spellcheck="false" ngModel required #email="ngModel" />
 
         </div>
         <div class="input-field">
-          <i class="fas fa-phone"></i>
+          <i class="fas fa-phone" style="color: #2ec724;"></i>
           <input type="text" placeholder="Mobile no" name="phone" 
             autocomplete="off" spellcheck="false"  ngModel required #phone="ngModel" />
         </div>
         <div class="input-field">
-          <i class="fas fa-lock"></i>
+          <i class="fas fa-lock" style="color: #2ec724;"></i>
           <input type="password" placeholder="Enter Password" name="p1" 
             autocomplete="off" spellcheck="false" ngModel required #p1="ngModel" />
         </div>
         <div class="input-field">
-          <i class="fas fa-lock"></i>
+          <i class="fas fa-lock" style="color: #2ec724;"></i>
           <input type="password" placeholder="Re-enter Password" name="p2" 
             autocomplete="off" spellcheck="false" ngModel required #p2="ngModel" />
         </div>
 
-        <input type="submit" [disabled]="f.invalid" class="btn" value="Sign up" />
+        <input type="submit" [disabled]="f.invalid" class="btn" value="Sign up" style="background-color: #2ec724;" />
         <p class="social-text" style="color: red;font-weight: bold;font-size: 20px;" *ngIf="avail">{{msg}}</p>
 
       </form>
